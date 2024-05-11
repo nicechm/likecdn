@@ -1,20 +1,18 @@
 # from flask import Flask
 
-# app = Flask(__name__)
-
-# @app.route('/')
-# def home():
-#     return 'Hello, World!'
-
-# @app.route('/about')
-# def about():
-#     return 'About'
-
-
 from flask import Flask, request, send_file
 from PIL import Image, ImageDraw
 
 app = Flask(__name__)
+
+
+@app.route('/')
+def home():
+    return 'Hello, Cho CDN!'
+
+@app.route('/about')
+def about():
+    return 'About'
 
 @app.route('/getImage/png')
 def get_image():
